@@ -101,7 +101,7 @@ const putData = () => {
 };
 putData();
 
-function increase(e) {
+function increase() {
   counter++;
   if (counter >= data.length - 1) {
     next.disabled = true;
@@ -113,7 +113,7 @@ function increase(e) {
   putData();
 }
 
-function decrease(e) {
+function decrease() {
   counter--;
   if (counter <= 0) {
     prev.disabled = true;
