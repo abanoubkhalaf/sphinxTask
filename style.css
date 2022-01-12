@@ -1,0 +1,165 @@
+:root {
+  --blue: #0fa0c5;
+  --disable: #6fc6dc;
+}
+.loader {
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url(imgs/1490.gif);
+  width: 100%;
+  background-repeat: no-repeat;
+  transform: translateZ(-50%, -50%);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  overflow: hidden;
+  user-select: none;
+  width: 100%;
+  font-size: 20px;
+  flex-direction: column;
+  position: relative;
+  animation-name: animation;
+  animation-duration: 2s;
+}
+#answer {
+  border: 1px solid var(--blue);
+  background-color: var(--blue);
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  padding: 5px 10px;
+  font-size: 25px;
+  position: relative;
+}
+#answer::before {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  left: 0;
+  top: -20px;
+  display: none;
+}
+#more,
+#less,
+#reset,
+#reload {
+  margin-top: 30px;
+  padding: 5px 10px;
+  background-color: var(--blue);
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid var(--blue);
+}
+.questionNumber {
+  margin-top: 30px;
+  padding: 5px 10px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  color: black;
+  border: 1px solid var(--blue);
+  font-weight: bold;
+}
+.numberQuestion {
+  font-weight: bold;
+  font-size: 25px;
+}
+#showAnswers {
+  margin-top: 30px;
+  padding: 5px 10px;
+  background-color: #a4d063;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid rgb(44, 158, 44);
+}
+#more:disabled,
+#less:disabled {
+  background-color: var(--disable);
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@keyframes animation {
+  0% {
+    left: 1000px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.container {
+  background-color: white;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px;
+  text-align: center;
+  font-size: 25px;
+  display: none;
+  border: 2px solid #f5821f;
+  border-radius: 12px;
+  position: relative;
+}
+.con-button {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: -2px;
+  align-items: center;
+  background-color: #deecf6;
+  width: 600px;
+
+  padding: 10px 20px;
+}
+i {
+  font-size: 30px;
+}
+.control-btn {
+  display: flex;
+  gap: 20px;
+}
+.num-bag {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.container::before {
+  content: "";
+  height: 400px;
+  width: 640px;
+  background-color: var(--blue);
+  position: absolute;
+  z-index: -1;
+  left: -20px;
+}
+.right-false {
+  position: relative;
+}
+
+.fa-check {
+  color: green;
+  position: absolute;
+  top: -30px;
+}
+.fa-times {
+  color: red;
+  position: absolute;
+  top: -30px;
+}

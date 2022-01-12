@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>Task</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio
+      id="raudio"
+      src="audios/mixkit-retro-game-notification-212.mp3"
+    ></audio>
+    <audio
+      id="faudio"
+      src="audios/mixkit-arcade-retro-game-over-213.mp3"
+    ></audio>
+    <div class="loader"></div>
+    <div>
+      <p>Circle , choose and write.</p>
+    </div>
+    <div class="container">
+
+      <div class="box">
+        <div class="num-bag">
+          <div class="numberQuestion"></div>
+          <img id="image" src="" width="100" height="100" />
+        </div>
+        <div class="right-false">
+        <div id="questions"></div>
+        <div id="answers"></div>
+      </div>
+    
+      </div>
+    </div>
+    <div class="con-button">
+      <div>
+        <button id="reload"> <i class="fas fa-sync-alt"></i></i></button>
+      </div>
+      <div class="control-btn">
+        <button id="reset"><i class="fas fa-redo-alt"></i></button>
+        <button id="showAnswers"><i class="fas fa-eye"></i></button>
+        <button id="less" onclick="decrease()" disabled>
+          <i class="fas fa-caret-left"></i>
+        </button>
+        <div class="questionNumber"></div>
+        <button id="more" onclick="increase()">
+          <i class="fas fa-caret-right"></i>
+        </button>
+     
+
+  
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
